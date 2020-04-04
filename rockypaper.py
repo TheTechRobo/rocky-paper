@@ -1,40 +1,35 @@
 from random import randint
 
 robobot = randint(0, 2) #Generate a random number from 0 to 2 (possibilities: 0, 1, 2)
-if robobot == 0:
-    robobotMove = "rock"
-elif robobot == 1:
-    robobotMove = "paper"
-elif robobot == 2:
-    robobotMove = "scissors"
+#                                           0: rock, 1: paper, 2: scissors
 else:
     print("An error occured while choosing a move.")
 player = input("Rock, paper, or scissors? ")
 player.lower()
-if player == rock:
-    if robobotMove == "rock":
+if player == "rock":
+    if robobotMove == "0":
         print("Tie game!")
-    elif robobotMove == "paper":
+    elif robobotMove == "1":
         print("The computer won :(")
-    elif robobotMove == "scissors":
+    elif robobotMove == "2":
         print("You Win! Nice job, you shattere the computer.")
     else:
         print("An error occured while parsing the move.")
 elif player == "paper":
-    if robobotMove == "rock":
+    if robobotMove == "0":
         print("You Win! Nice job, you covered the computer. \nHey look, it's overheating!")
-    elif robobotMove == "paper":
+    elif robobotMove == "1":
         print("Tie game!")
-    elif robobotMove == "scissors":
+    elif robobotMove == "2":
         print("The computer won :(")
     else:
         print("An error occured while parsing the move.")
 elif player == "scissors":
-    if robobotMove == "rock":
+    if robobotMove == "0":
         print("The computer won :(")
-    elif robobotMove == "paper":
+    elif robobotMove == "1":
         print("You win! Nice job, you cut the computer. \nNot sure how you cut metal, but I'll still say you won.")
-    elif robobotMove == "scissors":
+    elif robobotMove == "2":
         print("Tie game!")
     else:
         print("An error occured while parsing the move.")
