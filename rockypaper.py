@@ -2,8 +2,6 @@ from random import randint
 
 robobot = randint(0, 2) #Generate a random number from 0 to 2 (possibilities: 0, 1, 2)
 #                                           0: rock, 1: paper, 2: scissors
-else:
-    print("An error occured while choosing a move.")
 player = input("Rock, paper, or scissors? ")
 player.lower()
 if player == "rock":
@@ -12,7 +10,7 @@ if player == "rock":
     elif robobotMove == "1":
         print("The computer won :(")
     elif robobotMove == "2":
-        print("You Win! Nice job, you shattere the computer.")
+        print("You Win! Nice job, you shattered the computer.")
     else:
         print("An error occured while parsing the move.")
 elif player == "paper":
