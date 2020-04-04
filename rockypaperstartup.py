@@ -6,4 +6,4 @@ try:
 except (KeyboardInterrupt, EOFError): #if ^C or ^D
     e("\nSuccessfully exited rockyPaper.")
 except: #any other error
-    print("An unknown error occured.")
+    e("An unknown error occured :/")
