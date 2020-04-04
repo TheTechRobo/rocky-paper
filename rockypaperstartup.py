@@ -4,6 +4,6 @@ try:
     while True:
         r(path_name="rockypaper.py")
 except (KeyboardInterrupt, EOFError): #if ^C or ^D
-    e("Successfully exited rockyPaper.")
-#except: #any other error
-#    print("An unknown error occured.")
+    e("\nSuccessfully exited rockyPaper.")
+except: #any other error
+    print("An unknown error occured.")
