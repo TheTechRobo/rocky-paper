@@ -1,47 +1,47 @@
 from random import randint
-import tkinter
+import tkinter as gui
 def rock():
     player = "rock"
 def paper():
     player = "paper"
 def scissors():
     player = "scissors"
-rockypaper = tkinter.Tk()
+rockypaper = gui.Tk()
 rockypaper.title("rockyPaper GUI")
 robobot = randint(0, 2) #Generate a random number from 0 to 2 (possibilities: 0, 1, 2)
 #                                           0: rock, 1: paper, 2: scissors
-tkinter.Label("text="Choose an item:").pack()
-tkinter.Button(text="Choose rock", command=rock).pack()
-tkinter.Button(text="Choose paper", command=paper).pack()
-tkinter.Button(text="Choose scissors", command=scissors).pack()
+gui.Label("text="Choose an item:").pack()
+gui.Button(text="Choose rock", command=rock).pack()
+gui.Button(text="Choose paper", command=paper).pack()
+gui.Button(text="Choose scissors", command=scissors).pack()
 def ask(robo):
     if player == "rock":
         if robo == 0:
-            tkinter.messagebox.showinfo("The results are in", "Tie game!")
+            gui.messagebox.showinfo("The results are in", "Tie game!")
         elif robo == 1:
-            tkinter.messagebox.showerror("Results are in!", "The computer won :(")
+            gui.messagebox.showerror("Results are in!", "The computer won :(")
         elif robo == 2:
-            tkinter.messagebox.showinfo("Yayyyyy!", "You Win! Nice job, you shattered the computer.")
+            gui.messagebox.showinfo("Yayyyyy!", "You Win! Nice job, you shattered the computer.")
         else:
-            tkinter.messagebox.showerror("An error occured while parsing the move.")
+            gui.messagebox.showerror("An error occured while parsing the move.")
     elif player == "paper":
         if robo == 0:
-            print("You Win! Nice job, you covered the computer. \nHey look, it's overheating!")
+            gui.messagebox.showinfo("The results have arrived!", "You Win! Nice job, you covered the computer. \nHey look, it's overheating!")
         elif robo == 1:
-            print("Tie game!")
+            gui.messagebox.showinfo("I received a letter", "It says: Tie game!")
         elif robo == 2:
-            print("The computer won :(")
+            gui.messagebox.showerror("I'm sad", "The computer won :(")
         else:
-            print("An error occured while parsing the move.")
+            gui.messagebox.showerror("Error!", "An error occured while parsing the move.")
     elif player == "scissors":
         if robo == 0:
-            print("The computer won :(")
+            gui.messagebox.showerror(":(", "The computer won :(")
         elif robo == 1:
-            print("You win! Nice job, you cut the computer. \nNot sure how you cut metal, but I'll still say you won.")
+            gui.messagebox.showinfo("YAYAYAYAY!!! :D", "You win! Nice job, you cut the computer. \nNot sure how you cut metal, but I'll still say you won.")
         elif robo == 2:
-            print("Tie game!")
+            gui.messagebox.showinfo("Well, it's not BAD exactly...", "Tie game!")
         else:
-            print("An error occured while parsing the move.")
+            gui.messagebox.showerror("Error!", "An error occured while parsing the move.")
     else:
-        print("You did not choose a valid move.")
+        gui.messagebox.showerror("I am mad at you", "You did not choose a valid move.")
 ask(robobot)
