@@ -27,7 +27,7 @@ def ask(robo):
         if robo == 0:
             print("The computer won :(")
         elif robo == 1:
-            print("You win! Nice job, you cut the computer. \nNot sure how you cut metal, but I'll still say you won.")
+            print("You win! Nice job, you cut the computer. \nNot sure how you cut metal though...")
         elif robo == 2:
             print("Tie game!")
         else:
