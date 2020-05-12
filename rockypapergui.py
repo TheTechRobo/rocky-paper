@@ -1,5 +1,6 @@
 from random import randint
 import tkinter as gui
+import tkinter.messagebox
 def rock():
     player = "rock"
     ask(robobot, player)
