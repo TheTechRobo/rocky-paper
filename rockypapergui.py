@@ -2,17 +2,19 @@ from random import randint
 import tkinter as gui
 import tkinter.messagebox
 def rock():
+    robobot = randint(0, 2)
     player = "rock"
     ask(robobot, player)
 def paper():
+    robobot = randint(0, 2)
     player = "paper"
     ask(robobot, player)
 def scissors():
+    robobot = randint(0, 2)
     player = "scissors"
     ask(robobot, player)
 rockypaper = gui.Tk()
 rockypaper.title("rockyPaper GUI")
-robobot = randint(0, 2) #Generate a random number from 0 to 2 (possibilities: 0, 1, 2)
 #                                           0: rock, 1: paper, 2: scissors
 gui.Label(text="Choose an item:").pack()
 gui.Button(text="Choose rock", command=rock).pack()
