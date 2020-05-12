@@ -47,3 +47,4 @@ def ask(robo, player):
             gui.messagebox.showerror("Error!", "An error occured while parsing the move.")
     else:
         gui.messagebox.showerror("I am mad at you", "You did not choose a valid move.")
+rockypaper.mainloop()
