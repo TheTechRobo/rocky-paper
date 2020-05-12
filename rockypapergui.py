@@ -2,13 +2,13 @@ from random import randint
 import tkinter as gui
 def rock():
     player = "rock"
-    ask(robobot)
+    ask(robobot, player)
 def paper():
     player = "paper"
-    ask(robobot)
+    ask(robobot, player)
 def scissors():
     player = "scissors"
-    ask(robobot)
+    ask(robobot, player)
 rockypaper = gui.Tk()
 rockypaper.title("rockyPaper GUI")
 robobot = randint(0, 2) #Generate a random number from 0 to 2 (possibilities: 0, 1, 2)
@@ -17,7 +17,7 @@ gui.Label(text="Choose an item:").pack()
 gui.Button(text="Choose rock", command=rock).pack()
 gui.Button(text="Choose paper", command=paper).pack()
 gui.Button(text="Choose scissors", command=scissors).pack()
-def ask(robo):
+def ask(robo, player):
     if player == "rock":
         if robo == 0:
             gui.messagebox.showinfo("The results are in", "Tie game!")
