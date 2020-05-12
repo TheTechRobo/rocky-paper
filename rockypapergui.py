@@ -2,10 +2,13 @@ from random import randint
 import tkinter as gui
 def rock():
     player = "rock"
+    ask(robobot)
 def paper():
     player = "paper"
+    ask(robobot)
 def scissors():
     player = "scissors"
+    ask(robobot)
 rockypaper = gui.Tk()
 rockypaper.title("rockyPaper GUI")
 robobot = randint(0, 2) #Generate a random number from 0 to 2 (possibilities: 0, 1, 2)
