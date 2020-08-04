@@ -43,11 +43,12 @@ def ask(robo, player):
         if robo == 0:
             gui.messagebox.showerror(":(", "The computer won :(")
         elif robo == 1:
-            gui.messagebox.showinfo("YAYAYAYAY!!! :D", "You win! Nice job, you cut the computer. \nNot sure how you cut metal, but I'll still say you won.")
+            gui.messagebox.showinfo("YAYAYAYAY!!! :D", "You win! Nice job, you cut the computer. \nNot sure how you cut metal, but whatever.")
         elif robo == 2:
             gui.messagebox.showinfo("Well, it's not BAD exactly...", "Tie game!")
         else:
             gui.messagebox.showerror("Error!", "An error occured while parsing the move.")
     else:
         gui.messagebox.showerror("I am mad at you", "You did not choose a valid move.")
-rockypaper.mainloop()
+    rockypaper.destroy()
+gui.mainloop()
